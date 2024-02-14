@@ -1,20 +1,25 @@
-#! /bin/bash
+#! /bin/bash                        # указание используемого интерпритатора
+
 
 a=375
-hello=$a
-echo $hello
+hello=$a 
+echo $hello                         # '$' - это ссылка на переменную
 
-textfile=`cat test_bash`
-echo $textfile
+textfile=`cat test_bash`            #  `` - подстановка команд, можно и такую: $()
+echo $textfile                      # вывод команды в коммандную строку
 
-hello="A B           C   D"
-hello_s=$hello
-echo $hello_s
+rm `cat filename`                   # filename - содержит списолк файлов, rm - удаляет эти файлы
 
-echo $?
+hello="A B           C   D"         # "" - экранирует некоторый служебные символы, 
+hello_s=$hello                      # '' - экранирует все служебные символы
+echo $hello_s                       # \X повзоляет символ X
+
+echo $?                             # просмотр кода завершения
 
 lskdf
 echo $?
+
+exit 113                            # прямое указание с каким кодом завершения завершить процесс
 
 com1=$(date)
 echo "$com1 RLS WORK"
@@ -22,13 +27,29 @@ echo "$com1 RLS WORK"
 com2=$(cat<sample.txt)
 echo $com2
 
-echo -n "Введите 'var1' и 'var2': "
-read var1 var2
-echo "var1=$var1 var2=$var2"
+echo -n "Введите 'var1' и 'var2': " # ключ -n подавляет вывод переноса строки
+read var1 var2                      # ввести переменные
+echo "var1=$var1 var2=$var2"        
 
-com3=$(cat <<end)
+com3=$(cat <<end)                    # ввод до тех пор пока не ввведем end
 echo $com3
 
-exit 113
+# { ... } - вложенный блок
+
+# {
+# ...
+# ...
+# } > test # запись результата в блоке в файл test
+
+# $1, ${10},$*, $#, $_ - аргументы предыдущей команды, для первых 10 частей, от 10, все аргкменты, их количество, последний предыдущей
+
+# let, expr, (( ... )) - позволяет делать арифметические поерации над числами
+
+# let a = a + 5
+# a =$(($t + 1))
+
+
+
+                        
 
 
