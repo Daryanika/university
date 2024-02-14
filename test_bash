@@ -1,0 +1,34 @@
+#! /bin/bash
+
+a=375
+hello=$a
+echo $hello
+
+textfile=`cat test_bash`
+echo $textfile
+
+hello="A B           C   D"
+hello_s=$hello
+echo $hello_s
+
+echo $?
+
+lskdf
+echo $?
+
+com1=$(date)
+echo "$com1 RLS WORK"
+
+com2=$(cat<sample.txt)
+echo $com2
+
+echo -n "Введите 'var1' и 'var2': "
+read var1 var2
+echo "var1=$var1 var2=$var2"
+
+com3=$(cat <<end)
+echo $com3
+
+exit 113
+
+
