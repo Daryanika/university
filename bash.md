@@ -17,6 +17,12 @@ source имя_скрипта
 cmod 555 имя_cкрипта
 ИмяСкрипта # либо указать полный путь: ./ИмяСкрипта
 ```
+![image](https://github.com/aniknorth51/university/assets/159993734/16ee8bda-f96c-4cff-8fda-0f0e3385ed9a)
+![image](https://github.com/aniknorth51/university/assets/159993734/6d43f96b-7413-4d5b-9f66-4d11964e94b3)
+
+
+### Переменные и параметры
+
 
 
 
